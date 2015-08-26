@@ -1,0 +1,106 @@
+body {
+	font-family: Arial, Verdana, sans-serif;
+}
+canvas {
+	position: relative;
+	cursor: crosshair;
+}
+strong {
+	font-weight: bold;
+}
+.dlg-no-title .ui-dialog-titlebar {
+	display: none;
+}
+#validateTips {
+	color: #c70000;
+	font-size: 12px;
+	margin: 0px 30px;
+	border: 1px solid transparent;
+}
+#config {
+	background-color: #fff;
+	position: absolute;
+	width: 200px;
+	height: auto;
+	top: 0;
+	margin-top: 25%;
+	margin-left: 2%;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0px 0px 9px #7a7a7a;
+	font-size: 14px;
+}
+#instruction {
+	background-color: #fff;
+	position: absolute;
+	width: 270px;
+	height: 335px;
+	overflow-y: auto;
+	top: 0;
+	margin-top: 2%;
+	margin-left: 2%;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0px 0px 9px #7a7a7a;
+	font-size: 14px;
+}
+#instr_in li {
+	padding: 10px;
+}
+.top {
+	background-color: #cecece;
+	display: block;
+	height: 20px;
+	color: #000;
+	font-weight: bold;
+	padding: 7px;
+	border-radius: 5px 5px 0 0;
+	cursor: move;
+}
+#config_in li {
+	padding: 10px;
+}
+#config_in li p {
+	text-align: center;
+	margin-top: 10px;
+}
+#config_in li p select {
+	width: 100%;
+}
+#texto {
+	width: 100%;
+}
+#valor_t {
+	width: 100%;
+	margin-top: -10px;
+	font-size: 15px;
+}
+#tools {
+	font-size: 15px;
+}
+#tmp_canvas {
+	position: absolute;
+	left: 0px; right: 0;
+	bottom: 0; top: 0;
+	cursor: crosshair;
+}
+.ui-widget-overlay.custom-overlay {
+	background-color: black;
+	background-image: none;
+	opacity: 0.8;
+}
+.myButton {
+	background-color:#d9d9d9;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #a3a3a3;
+	display:inline-block;
+	cursor:pointer;
+}
+.myButton:hover {
+	color: #ffffff;
+	background-color:#5e5e5e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
