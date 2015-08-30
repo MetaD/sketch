@@ -33,13 +33,13 @@ var UserID = "";
 
 function ID_validation() {
 	UserID = $("#ID").val();
-	if (UserID == "testtest")
+	if (UserID == "testtest" || UserID == "B2ESS" || UserID == "B2ESS1" || UserID == "B2ESS2" || UserID == "B2ESS3" || UserID == "B2ESS4" || UserID == "B2ESS5")
 		return true;
 	if (!UserID || UserID.length === 0 || UserID.length > 3
 			|| !(+UserID) || !parseInt(UserID, 10)
 			|| (+UserID) === 0 || (+UserID) > 700) {
 		$("#ID").addClass("ui-state-error");
-		$("#validateTips").text("这个ID是无效的，请再次确认或联系主试").addClass("ui-state-highlight");
+		$("#validateTips").text("这个ID是无效的，请再次确认或联系我们").addClass("ui-state-highlight");
 		setTimeout(function() {
 			$("#validateTips").removeClass( "ui-state-highlight", 1500);
 		}, 500 );
