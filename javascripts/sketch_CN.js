@@ -33,7 +33,7 @@ var UserID = "";
 
 function ID_validation() {
 	UserID = $("#ID").val();
-	if (UserID == "testtest" || UserID == "B2ESS" || UserID == "B2ESS1" || UserID == "B2ESS2" || UserID == "B2ESS3" || UserID == "B2ESS4" || UserID == "B2ESS5")
+	if (UserID == "testtest" || UserID == "B2ESS" || UserID == "B2ESS1" || UserID == "B2ESS2" || UserID == "B2ESS3" || UserID == "B2ESS4" || UserID == "B2ESS5" || UserID == "pretest1" || UserID == "pretest2")
 		return true;
 	if (!UserID || UserID.length === 0 || UserID.length > 3
 			|| !(+UserID) || !parseInt(UserID, 10)
