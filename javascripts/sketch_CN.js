@@ -31,22 +31,60 @@ function changeSize(cntx, width, changeLine) {
 
 var UserID = "";
 
+function wrong_ID() {
+	$("#ID").addClass("ui-state-error");
+	$("#validateTips").text("这个ID是无效的，请再次确认或联系我们").addClass("ui-state-highlight");
+	setTimeout(function() {
+		$("#validateTips").removeClass( "ui-state-highlight", 1500);
+	}, 500 );
+}
+
 function ID_validation() {
 	UserID = $("#ID").val();
-	if (UserID == "testtest" || UserID == "B2ESS" || UserID == "B2ESS1" || UserID == "B2ESS2" || UserID == "B2ESS3" || UserID == "B2ESS4" || UserID == "B2ESS5" || UserID == "pretest1" || UserID == "pretest2")
+	if (UserID == "testtest") {
 		return true;
-	if (!UserID || UserID.length === 0 || UserID.length > 3
-			|| !(+UserID) || !parseInt(UserID, 10)
-			|| (+UserID) === 0 || (+UserID) > 700) {
-		$("#ID").addClass("ui-state-error");
-		$("#validateTips").text("这个ID是无效的，请再次确认或联系我们").addClass("ui-state-highlight");
-		setTimeout(function() {
-			$("#validateTips").removeClass( "ui-state-highlight", 1500);
-		}, 500 );
+	}
+	if (UserID == "PK089-2" || UserID == "PK100-2" || UserID == "PK475-2") {
+		return true;
+	}
+	if (!UserID || UserID.length != 5) {
+		console.log("!!1");
+		wrong_ID();
 		return false;
 	}
-	else
+	UserIdPart1 = UserID.substring(0,2);
+	UserIdPart2 = UserID.substring(2,5);
+	UserIdNumPart = parseInt(UserIdPart2, 10);
+	if (!UserIdNumPart) {
+		console.log("!!2");
+		wrong_ID();
+		return false;
+	}
+	var usedIDs = []
+	if (usedIDs.indexOf(UserIdNumPart) != -1) {
+		console.log("!!3");
+		wrong_ID();
+		return false;
+	}
+	if (UserIdPart1 === "BJ" &&
+		( (UserIdNumPart >= 1 && UserIdNumPart <= 442) || (UserIdNumPart >= 601 && UserIdNumPart <= 827) )) {
 		return true;
+	}
+	else if (UserIdPart1 === "PK") {
+		var invalidIDs = [36, 98, 102, 163, 267, 392, 430, 458, 486, 509, 523, 545, 591, 610, 611, 612];
+		if (invalidIDs.indexOf(UserIdNumPart) == -1 && UserIdNumPart >= 1 && UserIdNumPart <= 614) {
+			return true;
+		} else {
+			console.log("!!4");
+			wrong_ID();
+			return false;
+		}
+	}
+	else {
+		console.log("!!5");
+		wrong_ID();
+		return false;
+	}
 }
 
 $(function() {
