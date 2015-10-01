@@ -377,7 +377,7 @@ $(document).ready(function() {
 		var parseFile = new Parse.File(UserID+".png", {base64:dataURL});
 
 		sn_data.set("UserID", UserID);
-		sn_data.set("ip", myip);
+		sn_data.set("ip", 0);
 		sn_data.set("image", parseFile);
 
 		sn_data.save(null, {
