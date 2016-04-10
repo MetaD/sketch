@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
 <meta charset="UTF-8">
-<title>社会关系</title>
+<title>Sociogram</title>
 <link href="stylesheets/reset.css" rel="stylesheet" style="text/css" />
 <link href="stylesheets/main3.css" rel="stylesheet" style="text/css" media="screen" />
 <link href="stylesheets/jquery-ui.css" rel="stylesheet">
@@ -13,7 +13,7 @@
 	<div id="dialog">
 		<form autocomplete="off">
 			<fieldset>
-				<p>请输入您参与本实验的受邀代码:</p>
+				<p>Please enter the invitation code:</p>
 				<input type="text" id="ID" class="text ui-widget-content ui-corner-all" style="margin: 10px 30px 3px 30px">
 				<p id="validateTips"></p>
 				<!-- Allow form submission with keyboard without duplicating the dialog button -->
@@ -48,22 +48,22 @@
 			</div><!-- /instruction -->
 
 		<div id="config">
-			<span class="top">工具栏</span>
+			<span class="top">Tools</span>
 			<ul id="config_in">
 				<li>
 					<p>
 						<select id="tools" size="4">
-							<option selected="selected">铅笔</option>
-							<option>文字</option>
-							<option>圆</option>
-							<option>橡皮</option>
+							<option selected="selected">Pencil</option>
+							<option>Text</option>
+							<option>Circle</option>
+							<option>Eraser</option>
 						</select>
 					</p>
 				</li>
 				<li id="txt">
-					在此处输入文字:
+					Enter the text here and then click on the canvas:
 					<p>
-						<input type="text" id="valor_t" placeholder="输入人物或性别">
+						<input type="text" id="valor_t" placeholder="Enter here">
 						<!--
 						<select id="texto">
 							<option selected="selected">Arial</option>
@@ -75,7 +75,7 @@
 					</p>
 				</li>
 				<li>
-					尺寸: <span id="n_range">10</span>
+					Size: <span id="n_range">10</span>
 					<p>
 						<input type="range" id="rr" min="1" max="100" value="10"><!-- #rr is the value -->
 					</p>
@@ -91,22 +91,22 @@
 				<li></li>
 				<li>
 					<p>完成全部人物关系图后，请点击提交，进入新的页面</p>
-					<p><button type="button" class="myButton" style="padding:5px 10px" id="submit">提交</button></p>
-					<p id="submitting">正在提交，请稍候...</p>
+					<p><button type="button" class="myButton" style="padding:5px 10px" id="submit">Submit</button></p>
+					<p id="submitting">Submitting...</p>
 				</li>
 			</ul>
 		</div><!-- /config -->
 
 	<div id="post_submission" align="center">
-		<p>提交成功！感谢您的参与！</p>
+		<p>Submission successful!</p>
 		<p>&nbsp;</p>
 		<p>&nbsp;</p>
 		<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;请点击下一页继续输入您的基本信息和支付方式，以便我们向您支付报酬</p>
-		<button type="button" class="myButton" style="padding:5px 10px;margin:10px" onclick="window.location.replace('http://www.sojump.com/jq/5615094.aspx')">下一页</button>
+		<button type="button" class="myButton" style="padding:5px 10px;margin:10px" onclick="window.location.replace('http://www.sojump.com/jq/5615094.aspx')">Next</button>
 		<p>&nbsp;</p>
 		<p>&nbsp;</p>
 		<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;如果您尚未完成社会关系图，请点击返回继续修改，我们将以您的最后一次提交为准。<br/></p>
-		<button type="button" class="myButton" style="padding:5px 10px;margin:10px" onclick="$(&quot;#post_submission&quot;).dialog(&quot;close&quot;)">返回</button>
+		<button type="button" class="myButton" style="padding:5px 10px;margin:10px" onclick="$(&quot;#post_submission&quot;).dialog(&quot;close&quot;)">Back</button>
 	</div>
 
 	<div id="c"></div>
