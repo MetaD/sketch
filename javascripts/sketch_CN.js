@@ -102,7 +102,7 @@ $(function() {
 			$('.ui-widget-overlay').removeClass('custom-overlay');
 		},
 		buttons: {
-			"提交": function cont() {
+			"Submit": function cont() {
 				if (ID_validation())
 					$(this).dialog("close");
 			}
@@ -110,7 +110,7 @@ $(function() {
 	});
 
 	// add button id
-	$('.ui-dialog-buttonpane button:contains("提交")').attr("id", "dialog_cont");
+	$('.ui-dialog-buttonpane button:contains("Submit")').attr("id", "dialog_cont");
 
 	// forbid the default form submit action
 	$('form').on('submit', function(event) {
@@ -255,14 +255,14 @@ $(document).ready(function() {
 	    });
 
 		// pencil
-	    if (str == '铅笔') {
+	    if (str == 'Pencil') {
 			changeSize(cntx, 5, true);
 			switchMousedown(non_circle_click);
 		}
 
 
 		// eraser
-		if (str == '橡皮') {
+		if (str == 'Eraser') {
 			changeSize(cntx, 20, true);
 			cntx.strokeStyle = "#ffffff";	// white
 			cntx.fillStyle = "#ffffff";
@@ -271,7 +271,7 @@ $(document).ready(function() {
 
 
 		// text
-		if (str == '文字') {
+		if (str == 'Text') {
 			$('#txt').show();
 			changeSize(cntx, 25, false);
 			//write
@@ -295,7 +295,7 @@ $(document).ready(function() {
 
 
 		// circle
-		if (str == '圆') {
+		if (str == 'Circle') {
 			changeSize(cntx, 5, true);
 
 			function circle_click(e) {
